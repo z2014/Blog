@@ -1,0 +1,5 @@
+.tdStyle {
+  border-bottom: 1px solid #ccc;
+  height: 40px;
+  transition: all linear 0.2s;
+}

@@ -11,9 +11,7 @@ class TableLayout {
   }
   setHeight (value) {
     const el = this.table.$el
-    console.log('type', typeof value)
     if (typeof value === 'number') {
-      console.log('done', value)
       el.style['height'] = value + 'px'
     } else if (typeof value === 'string') {
       el.style['height'] = ''

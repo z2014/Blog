@@ -3,32 +3,26 @@ const TableStore = function (table, initialState) {
     throw new Error('Table is required')
   }
   this.table = table
-  console.log('this', this)
-  // for (let i = 0; i < this.$refs.table.tBodies[0].rows.length; i++) {
-  //   this.table.$refs.table.tBodies[0].rows[i].onmouseover = () => {
-  //     this.table.$refs.table.tBodies[0].rows[i].style.background = 'rgba(255, 99, 132, 0.2)'
-  //   }
-  //   this.table.$refs.table.tBodies[0].rows[i].onmouseout = () => {
-  //     this.table.$refs.table.tBodies[0].rows[i].style.background = 'white'
-  //   }
-  // }
+  this.states = {
+    columns: []
+  }
 }
 TableStore.prototype.mutations = {
   handleRowClick () {
-    // console.log(this)
     this.table.$emit('row-click')
   },
   handleHoverEvent (row) {
     this.table.$emit('row-hover')
   },
   init () {
-    console.log('initkkk', this.$refs.)
-    for (let i = 0; i < this.$refs.table.tBodies[0].rows.length; i++) {
-      this.$refs.table.tBodies[0].rows[i].onmouseover = () => {
-        this.$refs.table.tBodies[0].rows[i].style.background = 'rgba(255, 99, 132, 0.2)'
+    var rows = this.table.$refs.table.children[1].children
+    console.log(this.table.$refs.table.children[1].children)
+    for (let i = 0; i < rows.length; i++) {
+      rows[i].onmouseover = () => {
+        rows[i].style.background = 'rgba(255, 99, 132, 0.2)'
       }
-      this.table.$refs.table.tBodies[0].rows[i].onmouseout = () => {
-        this.table.$refs.table.tBodies[0].rows[i].style.background = 'white'
+      rows[i].onmouseout = () => {
+        rows[i].style.background = 'white'
       }
     }
   }

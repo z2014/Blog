@@ -1,1 +1,2 @@
-阅读element UI源码，尝试模仿vue-component中的table组件，慢慢实现它的功能
+- [Element UI Table组件实现思路](https://github.com/z2014/Vue-component/issues/1)
+- [js实现监测一个普通对象的变化](https://github.com/z2014/Vue-component/issues/2)

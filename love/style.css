@@ -1,0 +1,66 @@
+.panel{
+	width: 600px;
+	margin: 200px auto;
+	border: 1px solid #ccc;
+	padding: 20px
+}
+.panel:after{
+	clear: both;
+	display: block;
+	content: ''
+}
+.self-block{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin: 5px 0;
+}
+.self-block img{
+	width: 50px;
+	height: 50px;
+}
+.common-word{
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    text-indent: 20px;
+    padding: 5px;
+    margin: 0 10px;
+    display: inline-block;
+}
+.love-block{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 5px 0;
+}
+.love-block img{
+	width: 50px;
+	height: 50px;
+}
+.input{
+	width: 80%;
+	line-height: 40px;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	margin: 20px auto 0;
+	text-align: center;
+	color: #ccc;
+}
+#spanel{
+	display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: center;
+}
+.said{
+	margin: 5px;
+	padding: 5px;
+	width: 50%;
+	border-radius: 50% 50% 50% 50%;
+	list-style-type: none;
+	border: 1px solid #ccc;
+    text-align: center;
+    transition: all 0.5s;
+}

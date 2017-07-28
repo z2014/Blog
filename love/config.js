@@ -4,7 +4,7 @@ var data = [
     ],
     myword = [
         [{txt:'我是你的宝宝啊'}, {txt: '我就知道你要说这个'}],
-        [{txt: '我不想你' children: {txt: '那怎么可能呢?', {txt: '卧槽，你一定是外面有狗了'}]
+        [{txt: '我不想你', children: {txt: '那怎么可能呢?'}}, {txt: '卧槽，你一定是外面有狗了'}]
     ],
     dialog = document.getElementById('dialog'),
     spanel = document.getElementById('spanel'),

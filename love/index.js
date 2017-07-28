@@ -15,17 +15,23 @@ function chose() {
 	
 }
 
-function addDialog(obj,text) {
+function addDialog(obj,text) { 
+	var div = '';
 	if (obj === 'love') {
-		var div = "<div class='love-block'><img src='love.jpg'><p class='common-word'>" + text + "</p></div>";
+		for (var i = 0; i < text.length; i++) {
+			div += "<div class='love-block'><img src='love.jpg'><p class='common-word'>" + text[i] + "</p></div>"
+		}
 		dialog.innerHTML = dialog.innerHTML + div;
 	} else {
-        var div = "<div class='self-block'><p class='common-word'>" + text + "</p><img src='self.jpg'></div>";
-        dialog.innerHTML = dialog.innerHTML + div;
+        for (var i = 0; i < text.length; i++) {
+			div += "<div class='love-block'><img src='love.jpg'><p class='common-word'>" + text[i] + "</p></div>"
+		}
+		dialog.innerHTML = dialog.innerHTML + div;
 	}
 }
 
 function getMyword (index) {
+	if (myword[index][answer[index]]) {}
 	return myword[index][answer[index]]
 }
 

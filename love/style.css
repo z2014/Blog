@@ -14,6 +14,7 @@
 	justify-content: flex-end;
 	align-items: center;
 	margin: 5px 0;
+	transition: all 0.5s;
 }
 .self-block img{
 	width: 50px;
@@ -33,6 +34,7 @@
 	justify-content: flex-start;
 	align-items: center;
 	margin: 5px 0;
+	transition: all 0.5s;
 }
 .love-block img{
 	width: 50px;

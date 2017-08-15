@@ -2,6 +2,8 @@ var webpack = require('webpack')
 var path = require('path')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
+console.log(__dirname)
+
 module.exports = {
     entry: {	
         index : './script/src/entry.js',

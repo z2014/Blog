@@ -10,22 +10,36 @@
 // ReactDOM.render(<App/>,document.getElementById('app'))
 
 import React from 'react';
-class Welcome extends React.Component {
+class App extends React.Component {
   constructor() {
     super();
+    const aa = 11
+    this.state = {
+      ischeck: false,
+      bb: `${aa}`
+    }
+    this.change = this.change.bind(this)
   }
+
+  change() {
+    this.setState({
+      ischeck: !this.state.ischeck
+    })
+  }
+  componentDidMount () {
+    console.log('done')
+  }
+  
   render() {
-    return <div>{this.props.content}</div>;
+    return (<label>
+      <input
+      type="checkbox"
+      checked={this.state.ischeck}
+      onChange={this.change}
+      />
+      {this.state.ischeck ? this.props.labelon : this.props.labeloff}
+    </label>);
   }
 }
-Welcome.displayName = 'Welcome';
-Welcome.propTypes = {
-  /**
-   * content of element
-   */
-  content: React.PropTypes.string
-};
-Welcome.defaultProps = {
-  content: 'Hello Tmall'
-};
-module.exports = Welcome;
+App.displayName = 'App';
+module.exports = App;

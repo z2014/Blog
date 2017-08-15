@@ -49,31 +49,60 @@
 //   });
 // });
 
+import React from 'react'
+import App from '../script/src/entry'
+import renderer from 'react-test-renderer'
+import {shallow,mount} from 'enzyme';
+import sinon from 'sinon'
+import 'jsdom-global/register';
+import 'jest-enzyme';
 
-import React from 'react';
-import { expect } from 'chai';
-import { mount, shallow } from 'enzyme';
-import Welcome from '../script/src/entry.js';
+test('app has click', () => {
+	// const checkbox = shallow(
+ //        <App labelon="on" labeloff="off"/>
+	// )
+	// expect(checkbox.text()).toEqual('off');
+	// checkbox.find('input').simulate('change');
+	// expect(checkbox.text()).toEqual('on')
+    sinon.spy(App.prototype, 'componentDidMount')
+	const checkbox = mount(<App/>)
+	checkbox.setProps({
+		labelon: "on",
+		labeloff: "off"
+	})
+    expect(App.prototype.componentDidMount.calledOnce).toBe(true);
+})
 
-describe('<Welcome />', () => {
-  it('calls componentDidMount', () => {
-    const wrapper = enzyme.mount(<Welcome />);
-    chai.expect(Welcome.prototype.componentDidMount.calledOnce).to.equal(true);
-  });
-});
+// it('adds 1 + 2 to equal 3 in TScript', ()=> {
+//   const sum = require('../script/src/ts.ts');
+//   expect(sum(1, 2)).toBe(3);
+// });
 
-// import TestUtils from 'react-addons-test-utils';
+// it('adds 1 + 2 to equal 3 in JavaScript', ()=> {
+//   const sum = require('../script/src/ts.ts');
+//   expect(sum(1, 2)).toBe(3);
+// });
 
-// function shallowRender(Component) {
-//   const renderer = TestUtils.createRenderer();
-//   renderer.render(<Component/>);
-//   return renderer.getRenderOutput();
-// }
+// import * as React from 'react';
+// import * as ReactDOM from 'react-dom';
+// import * as TestUtils from 'react-dom/test-utils';
 
-// describe('Shallow Rendering', function () {
-//   it('App\'s title should be Todos', function () {
-//     const app = shallowRender(Welcome);
-//     expect(app.props.children[0].type).to.equal('h1');
-//     expect(app.props.children[0].props.children).to.equal('Todos');
-//   });
+// const CheckboxWithLabel = require('../script/src/ts');
+
+// it('CheckboxWithLabel changes the text after click', () => {
+//   // Render a checkbox with label in the document
+//   const checkbox = TestUtils.renderIntoDocument(
+//     <CheckboxWithLabel labelOn="On" labelOff="Off" />
+//   );
+
+//   const checkboxNode = ReactDOM.findDOMNode(checkbox);
+
+//   // Verify that it's Off by default
+//   expect(checkboxNode.textContent).toEqual('Off');
+
+//   // Simulate a click and verify that it is now On
+//   TestUtils.Simulate.change(
+//     TestUtils.findRenderedDOMComponentWithTag(checkbox, 'input')
+//   );
+//   expect(checkboxNode.textContent).toEqual('On');
 // });

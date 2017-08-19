@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for parser.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> parser.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">90.24% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>74/82</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60.53% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>23/38</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>10/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">90.63% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>58/64</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92</td><td class="line-coverage quiet"><span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export default class Parser {<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="if path not taken" >I</span><span class="missing-if-branch" title="if path not taken" >I</span><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="else path not taken" >E</span></span></span>
+	constructor (props) {
+	    this.dataList = props.data
+        this.text = props.config.richText ? props.config.richText.html.slice(3, props.config.richText.html.length - 4) : <span class="branch-1 cbranch-no" title="branch not covered" >''</span>
+        this._html = ''
+	}
+	render (txt) {
+	    let st = txt.indexOf('&lt;a href=""&gt;');
+        let end = txt.indexOf('&lt;/a&gt;') + 4;
+        //如果不是三元运算符
+        if (st === -1) {
+            this._html += this.evalue(txt)
+        } else {
+            //处理三元运算符情况
+            this._html += this.evalue(txt.slice(0,st))
+            let expression = this.rCode(txt.slice(st,end))
+            expression = expression.replace(/&amp;gt;/g,'&gt;').replace(/&amp;lt;/g,'&lt;')
+            expression = expression.split('?');
+            let cdt = expression[0].replace(/&amp;amp;/g,'&amp;').replace(/&amp;nbsp;/g, '')
+            cdt = this.evalue(cdt)
+            let option = expression[1].split('&amp;amp;')
+            let op_1 = this.evalue(option[0])
+            let op_2 = this.evalue(option[1])
+            let exp = `${cdt} ? '${op_1}' : '${op_2}'`
+            console.info('exp', exp)
+            this._html += eval(exp)
+            if (txt.slice(end).length !== 0) {
+                this.render(txt.slice(end))
+            }
+        }
+        return '&lt;p&gt;' + this._html + '&lt;/p&gt;'
+	}
+	//利用递归对文本进行替换
+	evalue (txt) {
+        switch (true) {
+            //处理月日等情况 (${dt_name} - 2)
+            case /\(\s*\S+\s*\)\%*/.test(txt):
+                let c_res = txt.match(/\(\s*\S+\s*\)\%*/) || ['${<span class="branch-1 cbranch-no" title="branch not covered" >}']</span>
+                let c_key = this.rWrap(c_res[0].match(/\${\w+}/)[0])
+                let exp = txt.match(/\(\s*\S+\s*\)/)
+                let c_num = c_key === 'wk_name' ? Stri<span class="branch-0 cbranch-no" title="branch not covered" >ng(this.dataList[c_key]) : Nu</span>mber(this.dataList[c_key])
+                exp = exp[0].replace(/\${\w+}/, c_num)
+                if (<span class="missing-if-branch" title="else path not taken" >E</span>c_key !== 'wk_name') {
+                    exp = eval(exp)
+                }
+                txt = /\(\s*\S+\s*\)\%/.test(txt) ? txt.<span class="branch-0 cbranch-no" title="branch not covered" >replace(/\(\s*\S+\s*\)\%/, eval(`${exp}*100`) + '%') : tx</span>t.replace(/\(\s*\S+\s*\)/, exp)
+                txt = this.evalue(txt)
+                return txt;
+            //处理百分号和绝对值. /${dt}/%
+            case<span class="branch-1 cbranch-no" title="branch not covered" > /\/\${\w+}\/\%/.test(txt):</span>
+                let b_res = txt.<span class="cstat-no" title="statement not covered" >match(/\/\${\w+}\/\%/) || ['${}']</span>
+                let b_key = this<span class="cstat-no" title="statement not covered" >.rWrap(b_res[0]).replace('%', '').replace(/\//g,'')</span>
+                let b_num = Numb<span class="cstat-no" title="statement not covered" >er(this.dataList[b_key]) * 100</span>
+                txt <span class="cstat-no" title="statement not covered" >= txt.replace(/\/\${\w+}\/\%/, `${Math.abs(Math.round(b_num))}%`)</span>
+                txt <span class="cstat-no" title="statement not covered" >= this.evalue(txt)</span>
+                retu<span class="cstat-no" title="statement not covered" >rn txt;</span>
+            //处理绝对值情况 ／${dt}/
+            case /\/\s*\${\w+}\s*\//.test(txt):
+                let a_res = txt.match(/\/\s*\${\w+}\s*\//) || ['${<span class="branch-1 cbranch-no" title="branch not covered" >}']</span>
+                let a_key = this.rWrap(a_res[0]).replace(/\//g,'')
+                let a_num = Number(this.dataList[a_key])
+                txt = txt.replace(/\/\s*\${\w+}\s*\//, Math.abs(a_num.toFixed(2)))
+                txt = this.evalue(txt)
+                return txt;
+            //处理百分号情况. ${dt}%
+            case /\${\w+}\%/.test(txt):
+                let p_res = txt.match(/\${\w+}\%/) || ['${<span class="branch-1 cbranch-no" title="branch not covered" >}']</span>
+                let p_key = this.rWrap(p_res[0]).replace('%', '')
+                let p_num = Number(this.dataList[p_key]) * 100
+                txt = txt.replace(/\${\w+}\%/, `${p_num.toFixed(2)}%`)
+                txt = this.evalue(txt)
+                return txt;
+            case /\${\w+}/.test(txt):
+                let res = txt.match(/\${\w+}/) || ['${<span class="branch-1 cbranch-no" title="branch not covered" >}']</span>
+                let key = this.rWrap(res[0])
+                let num = Number(this.dataList[key])
+                txt = txt.replace(/\${\w+}/, num.toFixed(2))
+                txt = this.evalue(txt)
+                return txt;
+            default: return txt
+        }
+    }
+    //replace&lt;code&gt;标签     
+    rCode (code) {
+        return code.replace('&lt;a href=""&gt;','').replace('&lt;/a&gt;','')
+    }
+    //replace${}
+    rWrap (txt) {
+        return txt.replace('$','').replace('{','').replace('}','')
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Aug 17 2017 17:00:49 GMT+0800 (CST)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>

@@ -2,8 +2,6 @@ var webpack = require('webpack')
 var path = require('path')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
-console.log(__dirname)
-
 module.exports = {
     entry: {	
         index : './script/src/entry.js',
@@ -11,6 +9,7 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, 'public/js/'),
+        publicPath: '',
        	filename: '[name].js'
     },
     resolve: {
@@ -22,7 +21,7 @@ module.exports = {
             exclude: /node_modules/,
             loader: 'babel-loader',
             query: {
-                presets: ['es2015', 'stage-3', 'react']
+                presets: [['es2015', {module:false}], 'stage-3', 'react']
             }
         },{
             test:/\.css$/,
@@ -31,7 +30,7 @@ module.exports = {
         }]
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin({name: 'vendor',filename: 'vendor.js'}),
+        // new webpack.optimize.CommonsChunkPlugin({name: 'vendor',filename: 'vendor.js'}),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'script/templates/backend.html'),
             filename: path.join(__dirname, 'template/backend.html')

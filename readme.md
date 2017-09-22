@@ -1,4 +1,5 @@
 ## 2017
+- [【翻译】Tree-shaking VS dead code elimination](https://github.com/z2014/Blog/issues/6)
 - [一篇文章告诉你React里为什么不能用index作为key](https://github.com/z2014/Blog/issues/5)
 - [由重构react组件引发的函数式编程的思考](https://github.com/z2014/Blog/issues/4)
 - [学习vuex源码笔记](https://github.com/z2014/Blog/issues/3)

@@ -1,0 +1,1 @@
+{"dependencies":[{"name":"./index.js","dynamic":true}],"generated":{"html":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Document</title>\n</head>\n<body>\n    <div id=\"app\"></div>\n    <script src=\"/dist/parcel.js\"></script>\n</body>\n</html>"},"hash":"f00463bf53bbdd4ff79c5b5d0e6352f7"}

@@ -1,0 +1,19 @@
+{
+  "name": "react-tool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "gooact": "github:sweetpalma/gooact"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3"
+  }
+}

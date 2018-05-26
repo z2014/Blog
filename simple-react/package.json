@@ -11,7 +11,8 @@
   "dependencies": {
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "gooact": "github:sweetpalma/gooact"
+    "gooact": "github:sweetpalma/gooact",
+    "react": "^16.3.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3"

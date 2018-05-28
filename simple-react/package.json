@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server index.js --mode development --module-bind js=babel-loader",
+    "start": "webpack-dev-server index.js --mode development --module-bind js=babel-loader --output-public-path=/dist/",
     "build": "webpack index.js --mode development --module-bind js=babel-loader"
   },
   "author": "",

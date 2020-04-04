@@ -1,5 +1,5 @@
 ## 2020
-- [css3 animation && filter: blur()引发的动画性能问题排查](https://github.com/z2014/Blog/issues/22)
+- [css3 animation && filter: blur()引发的动画性能问题排查](https://github.com/z2014/Blog/issues/24)
 ## 2019
 - [一次内存泄漏的问题排查](https://github.com/z2014/Blog/issues/21)
 - [Serverless+puppeteer打造云端自动化测试](https://github.com/z2014/Blog/issues/20)

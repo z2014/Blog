@@ -1,5 +1,5 @@
 ## 2020
-- [协同编辑 - OT算法](https://github.com/z2014/Blog/issues/26)
+- [协同编辑 - OT算法](https://github.com/z2014/Blog/issues/28)
 - [css3 animation && filter: blur()引发的动画性能问题排查](https://github.com/z2014/Blog/issues/24)
 
 ## 2019

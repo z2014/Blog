@@ -1,3 +1,6 @@
+## 2024
+- [peer dependencies - 隐式传递的危害](https://github.com/z2014/Blog/issues/38)
+
 ## 2020
 - [协同编辑 - OT算法](https://github.com/z2014/Blog/issues/28)
 - [css3 animation && filter: blur()引发的动画性能问题排查](https://github.com/z2014/Blog/issues/24)
